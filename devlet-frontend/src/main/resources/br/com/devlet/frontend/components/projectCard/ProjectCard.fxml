@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="cardProject" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="226.0" prefWidth="621.0" style="-fx-background-color: #D4D4D4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="project" layoutX="21.0" layoutY="18.0" text="Projeto -">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="projectName" layoutX="105.0" layoutY="20.0" text="Devlet">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <HBox fx:id="teamGroup" layoutX="21.0" layoutY="55.0" prefHeight="65.0" prefWidth="299.0" />
+      <Label fx:id="progressLabel" layoutX="21.0" layoutY="127.0" text="Progresso" />
+      <ProgressBar fx:id="progressBar" layoutX="21.0" layoutY="150.0" prefHeight="7.0" prefWidth="299.0" progress="0.0" />
+      <Pane fx:id="blueCircle" layoutX="21.0" layoutY="170.0" prefHeight="15.0" prefWidth="15.0" style="-fx-background-color: #347FCC; -fx-background-radius: 50%;" />
+      <Label fx:id="stopLabel" layoutX="48.0" layoutY="169.0" text="Parada" />
+      <Pane fx:id="orangeCircle" layoutX="21.0" layoutY="197.0" prefHeight="15.0" prefWidth="15.0" style="-fx-background-color: #ED782D; -fx-background-radius: 50%;" />
+      <Label fx:id="taskRunning" layoutX="48.0" layoutY="196.0" text="Em Andamento" />
+      <Pane fx:id="greenCircle" layoutX="191.0" layoutY="170.0" prefHeight="15.0" prefWidth="15.0" style="-fx-background-color: #2BC940; -fx-background-radius: 50%;" />
+      <Label fx:id="doneLabel" layoutX="218.0" layoutY="169.0" text="Concluído" />
+      <Pane fx:id="redCircle" layoutX="191.0" layoutY="197.0" prefHeight="15.0" prefWidth="15.0" style="-fx-background-color: #BF0F1A; -fx-background-radius: 50%;" />
+      <Label fx:id="dueLabel" layoutX="218.0" layoutY="196.0" text="Atrasado" />
+      <PieChart fx:id="graphId" layoutX="361.0" layoutY="15.0" prefHeight="197.0" prefWidth="217.0" title="Progess" />
+      <Label fx:id="progressPercentage" layoutX="82.0" layoutY="127.0" prefHeight="17.0" prefWidth="37.0" text="36%" />
+      <ImageView fx:id="listIcon" fitHeight="25.0" fitWidth="25.0" layoutX="298.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="doneIcon" fitHeight="25.0" fitWidth="25.0" layoutX="260.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

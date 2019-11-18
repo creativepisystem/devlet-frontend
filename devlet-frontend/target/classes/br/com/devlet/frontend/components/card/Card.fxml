@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.ProgressBar?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="card" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="233.0" prefWidth="322.0" style="-fx-background-color: #D4D4D4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="nomeProjeto" layoutX="14.0" layoutY="10.0" text="Projeto">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="nomeTarefa" layoutX="14.0" layoutY="40.0" text="Tarefa #4">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="progressLabel" layoutX="14.0" layoutY="172.0" text="Progresso" />
+      <Label fx:id="progressPercent" layoutX="82.0" layoutY="173.0" text="0" />
+      <ProgressBar fx:id="progressBar" layoutX="14.0" layoutY="198.0" prefHeight="6.0" prefWidth="300.0" progress="0.0" />
+      <Label fx:id="dateCard" layoutX="260.0" layoutY="173.0" text="31/Set" />
+      <Label fx:id="statusCard" layoutX="230.0" layoutY="210.0" text="Não Iniciado" />
+      <Group fx:id="detailsButton" layoutX="303.0" layoutY="22.0">
+         <children>
+            <Circle radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="openCardMenu" layoutY="10.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle layoutY="20.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </Group>
+      <HBox fx:id="teamGroups" layoutX="14.0" layoutY="70.0" prefHeight="37.0" prefWidth="294.0" />
+      <HBox fx:id="tagGroups" layoutX="17.0" layoutY="112.0" prefHeight="57.0" prefWidth="294.0" />
+   </children>
+</AnchorPane>

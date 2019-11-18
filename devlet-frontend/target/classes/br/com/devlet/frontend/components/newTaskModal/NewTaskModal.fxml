@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="689.0" prefWidth="900.0" style="-fx-background-color: #C4C4C4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="statusLabel" layoutX="25.0" layoutY="13.0" prefHeight="30.0" prefWidth="71.0" text="Backlog" textFill="#ed782d">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="createdIn" layoutX="25.0" layoutY="55.0" text="Criado em">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="dateLabel" layoutX="103.0" layoutY="55.0" text="05/11/2019 às 12:00:00">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="by" layoutX="268.0" layoutY="55.0" text="por">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="creatorLabel" layoutX="300.0" layoutY="55.0" text="Felipe Goulart">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="creatorLabel1" layoutX="409.0" layoutY="18.0" text="Responsável">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Pane fx:id="respondePane" layoutX="502.0" layoutY="13.0" prefHeight="30.0" prefWidth="30.0" />
+      <ImageView fx:id="closeIcon" fitHeight="23.0" fitWidth="23.0" layoutX="860.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" />
+      <Pane fx:id="firstDivisor" layoutY="80.0" prefHeight="1.0" prefWidth="900.0" style="-fx-background-color: #1F1616;" />
+      <Label fx:id="taskNameLabel" layoutX="26.0" layoutY="91.0" style="-fx-font-weight: bold;" text="Tarefa #4">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="descriptionLabel" layoutX="70.0" layoutY="123.0" style="-fx-font-weight: bold;" text="Descrição">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="descriptionIcon" fitHeight="23.0" fitWidth="23.0" layoutX="26.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true" />
+      <TextArea layoutX="70.0" layoutY="154.0" prefHeight="104.0" prefWidth="782.0" promptText="[ Inserir Descrição ]" wrapText="true" />
+      <Pane fx:id="firstDivisor1" layoutY="266.0" prefHeight="1.0" prefWidth="900.0" style="-fx-background-color: #1F1616;" />
+      <Label fx:id="memberLabel" layoutX="26.0" layoutY="282.0" style="-fx-font-weight: bold;" text="Membros">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <GridPane fx:id="teamGroups" layoutX="26.0" layoutY="313.0" maxWidth="250.0" prefHeight="65.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <ImageView fx:id="plusIcon" fitHeight="30.0" fitWidth="30.0" layoutX="108.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="440.0" layoutY="312.0" text="Início">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <DatePicker layoutX="488.0" layoutY="310.0" prefHeight="25.0" prefWidth="136.0" />
+      <Label layoutX="423.0" layoutY="352.0" text="Término">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <DatePicker layoutX="488.0" layoutY="350.0" prefHeight="25.0" prefWidth="136.0" />
+      <Label layoutX="657.0" layoutY="302.0" prefHeight="42.0" prefWidth="67.0" text="Horas Estimadas" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField layoutX="731.0" layoutY="311.0" prefHeight="25.0" prefWidth="121.0" />
+      <Label layoutX="656.0" layoutY="352.0" text="Prioridade">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ChoiceBox layoutX="731.0" layoutY="350.0" prefHeight="25.0" prefWidth="121.0" />
+      <Pane fx:id="firstDivisor11" layoutY="408.0" prefHeight="1.0" prefWidth="900.0" style="-fx-background-color: #1F1616;" />
+      <Pane fx:id="respondePaneComment" layoutX="34.0" layoutY="585.0" prefHeight="30.0" prefWidth="30.0" />
+   </children>
+</AnchorPane>
