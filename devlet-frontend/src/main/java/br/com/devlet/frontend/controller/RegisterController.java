@@ -3,8 +3,7 @@ package br.com.devlet.frontend.controller;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import br.com.devlet.frontend.Login;
-import br.com.devlet.frontend.Register;
+import br.com.devlet.frontend.Router;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -12,7 +11,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
 
 public class RegisterController implements Initializable {
 
@@ -64,31 +62,19 @@ public class RegisterController implements Initializable {
 		
 		doLogin.setOnMouseClicked(( MouseEvent e ) -> {
 			changeToLogin();
-			closeWindow();
 		});
 		
 	}
 
     @FXML
-    void changeToLogin() {
-  
-		Login login = new Login();    		
-		
+    void changeToLogin() {		
 		try {
-			
-			login.start(new Stage());
-			
+			Router.goTo("login");
 		} catch ( Exception error ) {
-			
-			System.out.print("Deu Ruim");
+			System.out.print(error.getStackTrace());
 		
 		}
     }
     
-    @FXML
-    void closeWindow() {
-    	Register.getStage().close();
-    }
-	
 
 }

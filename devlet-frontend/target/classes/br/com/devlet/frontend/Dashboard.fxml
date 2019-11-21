@@ -13,48 +13,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane fx:id="navBar" layoutX="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="1368.0" style="-fx-background-color: ED782D;">
-         <effect>
-            <DropShadow />
-         </effect>
-         <children>
-            <Button fx:id="home" layoutX="17.0" layoutY="3.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="43.0" style="-fx-background-color: FFA56B;" />
-            <Button fx:id="report" layoutX="77.0" layoutY="3.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="43.0" style="-fx-background-color: FFA56B;" />
-            <Button fx:id="add" layoutX="132.0" layoutY="3.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="43.0" style="-fx-background-color: FFA56B;" />
-            <Button fx:id="projects" layoutX="191.0" layoutY="3.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="43.0" style="-fx-background-color: FFA56B;" />
-            <Button layoutX="1303.0" layoutY="4.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="43.0" style="-fx-background-color: FFA56B;" />
-            <Label fx:id="titleBar" layoutX="656.0" layoutY="6.0" text="DevLet" textFill="#ffa56b" AnchorPane.rightAnchor="634.0" AnchorPane.topAnchor="7.0">
-               <font>
-                  <Font name="System Bold" size="22.0" />
-               </font>
-            </Label>
-            <ImageView fx:id="homeImage" fitHeight="39.0" fitWidth="43.0" layoutX="19.0" layoutY="4.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@assets/home.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="reportImage" fitHeight="32.0" fitWidth="39.0" layoutX="83.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@assets/report.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="addImage" fitHeight="32.0" fitWidth="32.0" layoutX="138.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@assets/plus.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="projectsImage" fitHeight="32.0" fitWidth="32.0" layoutX="197.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@assets/folder.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="userImage" fitHeight="32.0" fitWidth="32.0" layoutX="1309.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@assets/user.png" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
+      <fx:include id="header" source="components/header/Header.fxml"/>
       <Label fx:id="dashLabel" layoutX="34.0" layoutY="60.0" style="-fx-font-weight: bold;" text="Dashboard" textAlignment="CENTER">
          <font>
             <Font size="20.0" />

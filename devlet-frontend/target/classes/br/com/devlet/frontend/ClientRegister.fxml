@@ -10,7 +10,8 @@
 
 <AnchorPane fx:id="clientRegister" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane fx:id="clientRegisterPanel" layoutX="313.0" layoutY="97.0" prefHeight="615.0" prefWidth="741.0" style="-fx-background-color: #C4C4C4;">
+   	<fx:include id="header" source="components/header/Header.fxml" />
+      <Pane fx:id="clientRegisterPanel" layoutX="313.0" layoutY="67.0" prefHeight="615.0" prefWidth="741.0" style="-fx-background-color: #C4C4C4;">
          <children>
             <Label fx:id="clienteRegisterLabel" layoutX="306.0" layoutY="30.0" prefHeight="73.0" prefWidth="130.0" text="Cadastro Cliente" textAlignment="CENTER" wrapText="true">
                <font>

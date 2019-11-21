@@ -11,7 +11,8 @@
 
 <AnchorPane fx:id="staffRegister" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane fx:id="staffPanel" layoutX="424.0" layoutY="105.0" prefHeight="615.0" prefWidth="741.0" style="-fx-background-color: #C4C4C4;">
+   	<fx:include id="header" source="components/header/Header.fxml" />
+      <Pane fx:id="staffPanel" layoutX="313.0" layoutY="57.0" prefHeight="615.0" prefWidth="741.0" style="-fx-background-color: #C4C4C4;">
          <children>
             <Label fx:id="staffLabel" layoutX="298.0" layoutY="25.0" prefHeight="80.0" prefWidth="146.0" text="Cadastro Colaborador" textAlignment="CENTER" wrapText="true">
                <font>

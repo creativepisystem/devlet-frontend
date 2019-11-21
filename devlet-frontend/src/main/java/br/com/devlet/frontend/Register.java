@@ -35,6 +35,7 @@ public class Register extends Application {
         stage.setHeight(primaryScreenBounds.getHeight());
         setStage(stage);
         stage.show();
+        
     }
 
     public static Stage getStage() {

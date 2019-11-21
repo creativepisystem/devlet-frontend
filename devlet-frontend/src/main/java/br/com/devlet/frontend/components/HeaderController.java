@@ -4,13 +4,18 @@ import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import br.com.devlet.frontend.Add;
+import br.com.devlet.frontend.App;
+import br.com.devlet.frontend.Router;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 public class HeaderController implements Initializable {
 
@@ -48,11 +53,28 @@ public class HeaderController implements Initializable {
     private ImageView userImage;
     
     public void initialize() {
-        	
+    	
     }
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		
+		homeImage.setOnMouseClicked(( MouseEvent event ) -> {
+			dash();
+		});
+		
+		reportImage.setOnMouseClicked(( MouseEvent event ) -> {
+			report();
+		});
+		
+		addImage.setOnMouseClicked(( MouseEvent event ) -> {
+			add();
+		});
+		
+		projectsImage.setOnMouseClicked(( MouseEvent e ) -> {
+			flow();
+		});
+		
 		
 		File fileHome = new File("src/main/resources/br/com/devlet/frontend/assets/home.png");
 		Image home = new Image(fileHome.toURI().toString());
@@ -72,8 +94,41 @@ public class HeaderController implements Initializable {
 		
 		File fileUser = new File("src/main/resources/br/com/devlet/frontend/assets/user.png");
 		Image user = new Image(fileUser.toURI().toString());
-		userImage.setImage(user);		
+		userImage.setImage(user);
 		
+	}
+	
+	public void dash() {
+		try {
+			Router.goTo("dashboard");
+		} catch ( Exception e ) {
+			System.out.print(e.getStackTrace());
+		}
+	}
+	
+	public void report() {
+		//
+	}
+	
+	public void add() {
+		Add add= new Add();
+		try {
+			add.start(new Stage());
+		} catch ( Exception e ) {
+			System.out.print(e.getStackTrace());
+		}
+	}
+	
+	public void flow() {
+		try {
+			Router.goTo("flow");
+		} catch ( Exception e ) {
+			System.out.print(e.getStackTrace());
+		}
+	}
+	
+	public void closeWindow() {
+		App.closeCurrentWindow();
 	}
 
 }

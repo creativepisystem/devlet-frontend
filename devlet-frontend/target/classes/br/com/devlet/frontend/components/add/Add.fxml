@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="585.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.devlet.frontend.components.AddController">
+   <children>
+      <VBox fx:id="addBox" prefHeight="400.0" prefWidth="585.0" style="-fx-background-color: #fff;">
+         <children>
+            <Pane fx:id="panelItem1" prefHeight="133.0" prefWidth="200.0" style="-fx-background-color: #B5B5B5; -fx-border-color: #ED782D; -fx-cursor: hand;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label fx:id="addProject" layoutX="126.0" layoutY="38.0" text="Adicionar Projeto">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="addProjectImage" fitHeight="70.0" fitWidth="70.0" layoutX="31.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="panelItem2" prefHeight="133.0" prefWidth="200.0" style="-fx-background-color: #B5B5B5; -fx-border-color: #ED782D; -fx-cursor: hand;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label fx:id="addProject1" layoutX="129.0" layoutY="38.0" text="Adicionar Cliente">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="addClientImage" fitHeight="70.0" fitWidth="70.0" layoutX="36.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="panelItem3" prefHeight="133.0" prefWidth="200.0" style="-fx-background-color: #B5B5B5; -fx-border-color: #ED782D; -fx-cursor: hand;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label fx:id="addProject11" layoutX="129.0" layoutY="38.0" text="Adicionar Colaborador">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="addColaboradorImage" fitHeight="70.0" fitWidth="70.0" layoutX="40.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

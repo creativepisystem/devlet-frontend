@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -13,7 +15,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="689.0" prefWidth="900.0" style="-fx-background-color: #C4C4C4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="newTaskModal" fx:controller="br.com.devlet.frontend.components.NewTaskModalController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="689.0" prefWidth="900.0" style="-fx-background-color: #C4C4C4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label fx:id="statusLabel" layoutX="25.0" layoutY="13.0" prefHeight="30.0" prefWidth="71.0" text="Backlog" textFill="#ed782d">
          <font>
@@ -108,5 +110,21 @@
       <ChoiceBox layoutX="731.0" layoutY="350.0" prefHeight="25.0" prefWidth="121.0" />
       <Pane fx:id="firstDivisor11" layoutY="408.0" prefHeight="1.0" prefWidth="900.0" style="-fx-background-color: #1F1616;" />
       <Pane fx:id="respondePaneComment" layoutX="34.0" layoutY="585.0" prefHeight="30.0" prefWidth="30.0" />
+      <Button fx:id="btnSalvar" layoutX="723.0" layoutY="628.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="141.0" style="-fx-background-color: #2BC940;" text="Salvar" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="#169725" offsetY="4.0" />
+         </effect>
+      </Button>
+      <Button fx:id="btnCancelar" layoutX="556.0" layoutY="628.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="141.0" style="-fx-background-color: #B5B5B5;" text="Cancelar">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="#0000008b" offsetY="4.0" />
+         </effect>
+      </Button>
    </children>
 </AnchorPane>

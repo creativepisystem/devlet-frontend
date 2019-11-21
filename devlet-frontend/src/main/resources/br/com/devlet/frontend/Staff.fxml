@@ -14,6 +14,7 @@
 
 <AnchorPane fx:id="staff" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #C4C4C4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
+   	<fx:include id="header" source="components/header/Header.fxml" />
       <Label fx:id="staffLabel" layoutX="586.0" layoutY="88.0" text="Colaboradores">
          <font>
             <Font size="30.0" />

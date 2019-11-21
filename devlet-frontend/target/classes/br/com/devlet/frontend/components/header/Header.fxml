@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="navBar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="1368.0" style="-fx-background-color: ED782D;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.devlet.frontend.components.HeaderController">
+<AnchorPane fx:id="navBar" fx:controller="br.com.devlet.frontend.components.HeaderController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="1368.0" style="-fx-background-color: ED782D;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <effect>
       <DropShadow />
    </effect>
@@ -22,10 +22,10 @@
             <Font name="System Bold" size="22.0" />
          </font>
       </Label>
-      <ImageView fx:id="homeImage" fitHeight="39.0" fitWidth="43.0" layoutX="19.0" layoutY="4.0" opacity="0.8" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" />
       <ImageView fx:id="reportImage" fitHeight="32.0" fitWidth="39.0" layoutX="83.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" />
       <ImageView fx:id="addImage" fitHeight="32.0" fitWidth="32.0" layoutX="138.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" />
       <ImageView fx:id="projectsImage" fitHeight="32.0" fitWidth="32.0" layoutX="197.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" />
       <ImageView fx:id="userImage" fitHeight="32.0" fitWidth="32.0" layoutX="1309.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" />
+      <ImageView fx:id="homeImage" fitHeight="32.0" fitWidth="39.0" layoutX="19.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" />
    </children>
 </AnchorPane>

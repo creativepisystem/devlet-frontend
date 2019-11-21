@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<ScrollPane fx:id="scroll" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="59.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<ScrollPane fx:id="scroll" fx:controller="br.com.devlet.frontend.components.ColumnController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="61.0" prefWidth="337.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <content>
       <VBox fx:id="verticalContainer" prefHeight="59.0" prefWidth="335.0" style="-fx-background-color: #B5B5B5;">
          <children>
