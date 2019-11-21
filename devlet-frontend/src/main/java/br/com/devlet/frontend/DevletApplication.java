@@ -22,6 +22,13 @@ public class DevletApplication extends Application{
     	Router.when("register","Register.fxml");
     	Router.when("dashboard","Dashboard.fxml");
     	Router.when("flow","Flow.fxml");
+    	Router.when("newProject","NewProject.fxml");
+    	Router.when("clientRegister","ClientRegister.fxml");
+    	Router.when("staffRegister","StaffRegister.fxml");
+    	Router.when("client","Client.fxml");
+    	Router.when("staff","Staff.fxml");
+    	
+    	
     	Router.goTo("login");
     }
    

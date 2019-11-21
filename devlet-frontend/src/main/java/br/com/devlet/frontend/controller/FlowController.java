@@ -96,8 +96,6 @@ public class FlowController implements Initializable {
     @FXML
     private Label addTaskLabel;
     
-    private List stages;
-    
     public void initialize() {
     	
     }

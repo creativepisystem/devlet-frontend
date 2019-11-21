@@ -5,10 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import br.com.devlet.frontend.Add;
-import br.com.devlet.frontend.App;
-import br.com.devlet.frontend.ClientRegister;
-import br.com.devlet.frontend.NewProject;
-import br.com.devlet.frontend.StaffRegister;
+import br.com.devlet.frontend.Router;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -18,7 +15,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 
 public class AddController implements Initializable {
 
@@ -86,34 +82,30 @@ public class AddController implements Initializable {
     }
     
     public void newProject() {
-    	NewProject newProject = new NewProject();
     	try {
-    		newProject.start(new Stage());
-    	} catch ( Exception e ) {
-    		System.out.print(e.getStackTrace());
-    	}
+			Router.goTo("newProject");
+		} catch ( Exception e ) {
+			System.out.print(e.getStackTrace());
+		}
     }
     
     public void newClient() {
-    	ClientRegister clientRegister = new ClientRegister();
     	try {
-    		clientRegister.start(new Stage());
-    	} catch ( Exception e ) {
-    		System.out.print(e.getStackTrace());
-    	}
+			Router.goTo("clientRegister");
+		} catch ( Exception e ) {
+			System.out.print(e.getStackTrace());
+		}
     }
     
     public void newColaborador() {
-    	StaffRegister staffRegister = new StaffRegister();
     	try {
-    		staffRegister.start(new Stage());
-    	} catch ( Exception e ) {
-    		System.out.print(e.getStackTrace());
-    	}
+			Router.goTo("staffRegister");
+		} catch ( Exception e ) {
+			System.out.print(e.getStackTrace());
+		}
     }
     
     public void closeWindow() {
-    	App.closeCurrentWindow();
     	Add.getStage().close();
     }
 }

@@ -5,7 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import br.com.devlet.frontend.Add;
-import br.com.devlet.frontend.App;
+import br.com.devlet.frontend.Lists;
 import br.com.devlet.frontend.Router;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -64,7 +64,7 @@ public class HeaderController implements Initializable {
 		});
 		
 		reportImage.setOnMouseClicked(( MouseEvent event ) -> {
-			report();
+			lists();
 		});
 		
 		addImage.setOnMouseClicked(( MouseEvent event ) -> {
@@ -106,8 +106,13 @@ public class HeaderController implements Initializable {
 		}
 	}
 	
-	public void report() {
-		//
+	public void lists() {
+		Lists lists = new Lists();
+		try {
+			lists.start(new Stage());
+		} catch ( Exception e ) {
+			System.out.print(e.getStackTrace());
+		}
 	}
 	
 	public void add() {
@@ -125,10 +130,6 @@ public class HeaderController implements Initializable {
 		} catch ( Exception e ) {
 			System.out.print(e.getStackTrace());
 		}
-	}
-	
-	public void closeWindow() {
-		App.closeCurrentWindow();
 	}
 
 }

@@ -12,48 +12,48 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="staff" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #C4C4C4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #C4C4C4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
    	<fx:include id="header" source="components/header/Header.fxml" />
-      <Label fx:id="staffLabel" layoutX="586.0" layoutY="53.0" text="Colaboradores">
+      <Label fx:id="officeLabel" layoutX="642.0" layoutY="52.0" text="Clientes">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Pane fx:id="divPanel1" layoutX="1.0" layoutY="104.0" prefHeight="2.0" prefWidth="1366.0" style="-fx-background-color: #595353;" />
-      <Label fx:id="filterLabel" layoutX="69.0" layoutY="117.0" text="Filtros">
+      <Pane layoutX="1.0" layoutY="103.0" prefHeight="2.0" prefWidth="1366.0" style="-fx-background-color: #595353;" />
+      <Label fx:id="filterLabel" layoutX="69.0" layoutY="118.0" text="Filtros">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Label fx:id="nameFilterLabel" layoutX="69.0" layoutY="176.0" text="Nome">
+      <Label fx:id="nameFilterLabel" layoutX="69.0" layoutY="177.0" text="Nome">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="searchByName" layoutX="144.0" layoutY="171.0" prefHeight="36.0" prefWidth="480.0" style="-fx-background-color: #D4D4D4;" />
-      <Pane fx:id="divPanel2" layoutX="1.0" layoutY="222.0" prefHeight="2.0" prefWidth="1366.0" style="-fx-background-color: #595353;" />
-      <Button fx:id="btnSearch" layoutX="1097.0" layoutY="163.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="226.0" style="-fx-background-color: #4F94DB;" text="Pesquisar" textFill="WHITE">
+      <TextField fx:id="searchByName" layoutX="144.0" layoutY="172.0" prefHeight="36.0" prefWidth="480.0" style="-fx-background-color: #D4D4D4;" />
+      <Pane layoutX="1.0" layoutY="223.0" prefHeight="2.0" prefWidth="1366.0" style="-fx-background-color: #595353;" />
+      <Button fx:id="btnSearch" layoutX="1097.0" layoutY="174.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="226.0" style="-fx-background-color: #4F94DB;" text="Pesquisar" textFill="WHITE">
          <effect>
             <DropShadow color="#347fcc" height="26.93" offsetY="5.0" spread="0.34" width="15.07" />
          </effect>
       </Button>
-      <Pane layoutX="172.0" layoutY="264.0" prefHeight="41.0" prefWidth="940.0" style="-fx-background-color: #757575;">
+      <Pane fx:id="headerPanel" layoutX="172.0" layoutY="261.0" prefHeight="41.0" prefWidth="940.0" style="-fx-background-color: #757575;">
          <children>
-            <HBox fx:id="headerPanel" prefHeight="41.0" prefWidth="940.0">
+            <HBox layoutY="-10.0" prefHeight="41.0" prefWidth="940.0">
                <children>
-                  <Pane fx:id="panelName" prefHeight="200.0" prefWidth="465.0">
+                  <Pane fx:id="officePanel" prefHeight="200.0" prefWidth="465.0">
                      <children>
-                        <Label fx:id="nameLabel" alignment="TOP_CENTER" layoutX="5.0" layoutY="7.0" prefHeight="27.0" prefWidth="454.0" text="Nome" textFill="WHITE">
+                        <Label fx:id="officeHeaderLabel" alignment="TOP_CENTER" layoutX="6.0" layoutY="17.0" prefHeight="27.0" prefWidth="454.0" text="Cliente" textFill="WHITE">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
                      </children>
                   </Pane>
-                  <Pane fx:id="panelOfice" prefHeight="200.0" prefWidth="310.0">
+                  <Pane fx:id="valuePanel" prefHeight="200.0" prefWidth="310.0">
                      <children>
-                        <Label fx:id="officeLabel" alignment="TOP_CENTER" layoutX="6.0" layoutY="7.0" prefHeight="27.0" prefWidth="299.0" text="Cargo" textFill="WHITE">
+                        <Label fx:id="valueHeaderLabel" alignment="TOP_CENTER" layoutX="6.0" layoutY="17.0" prefHeight="27.0" prefWidth="299.0" text="Valor" textFill="WHITE">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -63,13 +63,13 @@
                </children>
             </HBox>
          </children></Pane>
-      <Label fx:id="newOfficeLabel" layoutX="920.0" layoutY="233.0" text="Cadastrar Novo Cargo" textFill="#00000080">
+      <Label layoutX="920.0" layoutY="233.0" text="Cadastrar Novo Cargo" textFill="#00000080">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
       <ImageView fx:id="imgPlus" fitHeight="15.0" fitWidth="15.0" layoutX="895.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true" />
-      <Pane fx:id="panelList" layoutX="172.0" layoutY="314.0" prefHeight="356.0" prefWidth="940.0" style="-fx-background-color: #B5B5B5;">
+      <Pane fx:id="panelList" layoutX="172.0" layoutY="310.0" prefHeight="356.0" prefWidth="940.0" style="-fx-background-color: #B5B5B5;">
          <children>
             <ScrollPane fx:id="scrollPaneList" prefHeight="356.0" prefWidth="940.0">
                <content>
@@ -80,7 +80,7 @@
       </Pane>
       <Button fx:id="btnPrev" layoutX="172.0" layoutY="678.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="35.0" />
       <Button fx:id="btnNext" layoutX="278.0" layoutY="678.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="35.0" />
-      <Pane layoutX="223.0" layoutY="681.0" prefHeight="33.0" prefWidth="42.0" style="-fx-background-color: #347FCC; -fx-background-radius: 10px;">
+      <Pane layoutX="223.0" layoutY="679.0" prefHeight="33.0" prefWidth="42.0" style="-fx-background-color: #347FCC; -fx-background-radius: 10px;">
          <children>
             <Label fx:id="pageLabel" contentDisplay="CENTER" layoutX="4.0" layoutY="3.0" prefHeight="27.0" prefWidth="35.0" text="1">
                <font>
