@@ -7,6 +7,7 @@ import java.util.ResourceBundle;
 
 import br.com.devlet.frontend.NewTaskModal;
 import br.com.devlet.frontend.Router;
+import br.com.devlet.frontend.event.EventBus;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -101,12 +102,8 @@ public class NewTaskModalController implements Initializable {
     
     public void closeWindow() {
     	NewTaskModal.getStage().close();
-    	try {
-			Router.goTo("flow");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+    	EventBus.dispatch("modalClose",null);
+			
     }
     
     @SuppressWarnings("unchecked")

@@ -16,7 +16,10 @@ public class DevletApplication extends Application{
 
     @Override
     public void start(Stage stage) throws IOException {
-    	Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
+    	Rectangle2D primaryScreenBounds = Screen.getPrimary().getBounds();
+    	stage.setY(0);
+    	stage.setX(-7.6);
+    	
     	Router.bind(this, stage,primaryScreenBounds.getWidth(),primaryScreenBounds.getHeight());
     	Router.when("login","Login.fxml");
     	Router.when("register","Register.fxml");

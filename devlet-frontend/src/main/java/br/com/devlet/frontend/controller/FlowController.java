@@ -5,11 +5,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import javax.swing.JOptionPane;
+
 import br.com.devlet.frontend.NewTaskModal;
 import br.com.devlet.frontend.Router;
+import br.com.devlet.frontend.Util;
+import br.com.devlet.frontend.event.EventBus;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
@@ -117,20 +123,19 @@ public class FlowController implements Initializable {
 			System.out.print(e.getStackTrace());
 		}
 		
-		
+		EventBus.listen("modalClose", obj ->{
+			add();
+		});
 	}
 	
 	public void add() {
-		
-		flowContainer.getChildren().add(scroll);
-		List<Object> columns = (List<Object>) Router.getProp("columns");
+		//flowContainer.getChildren().add(scroll);
 		try {
-			for (Object object : columns) {
-				ScrollPane newLoadedPane = FXMLLoader.load(getClass().getClassLoader().getResource("br/com/devlet/frontend/components/column/Column.fxml"));
-				flowContainer.getChildren().add(newLoadedPane);				
-			}
+			Parent resource = Util.loadResource(getClass(),"br/com/devlet/frontend/components/column/Column.fxml");
+			resource.applyCss();
+			flowContainer.getChildren().add(0,resource);
 		} catch ( Exception e ) {
-			System.out.print(e);
+			e.printStackTrace();
 		}
 	}
 

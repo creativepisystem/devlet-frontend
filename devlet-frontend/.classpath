@@ -29,5 +29,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/Hideki/eclipse-workspace/devlet/jar/FXRouter.jar" sourcepath="C:/Users/Hideki/eclipse-workspace/devlet/jar/FXRouter-1.0.0"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
