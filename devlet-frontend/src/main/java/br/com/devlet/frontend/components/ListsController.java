@@ -3,7 +3,6 @@ package br.com.devlet.frontend.components;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import br.com.devlet.frontend.Lists;
 import br.com.devlet.frontend.Router;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -48,12 +47,10 @@ public class ListsController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
     	
     	panelItem1.setOnMouseClicked(( MouseEvent event ) -> {
-    		closeWindow();
     		listClient();
     	});
     	
     	panelItem2.setOnMouseClicked(( MouseEvent event ) -> {
-    		closeWindow();
     		listStaff();
     	});
     	
@@ -75,8 +72,5 @@ public class ListsController implements Initializable {
 		}
     }
     
-    public void closeWindow() {
-    	Lists.getStage().close();
-    }
 
 }

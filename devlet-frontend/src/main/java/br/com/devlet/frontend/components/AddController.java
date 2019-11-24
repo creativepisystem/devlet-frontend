@@ -4,7 +4,6 @@ import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import br.com.devlet.frontend.Add;
 import br.com.devlet.frontend.Router;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -59,17 +58,14 @@ public class AddController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
     	
     	panelItem1.setOnMouseClicked(( MouseEvent event ) -> {
-    		closeWindow();
     		newProject();
     	});
     	
     	panelItem2.setOnMouseClicked(( MouseEvent event ) -> {
-    		closeWindow();
     		newClient();
     	});
     	
     	panelItem3.setOnMouseClicked(( MouseEvent event ) -> {
-    		closeWindow();
     		newColaborador();
     	});
 		
@@ -105,7 +101,4 @@ public class AddController implements Initializable {
 		}
     }
     
-    public void closeWindow() {
-    	Add.getStage().close();
-    }
 }
